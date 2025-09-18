@@ -2,16 +2,14 @@ import asyncio
 import os
 
 from aiogram import Bot, Dispatcher, types
-from dotenv import load_dotenv
+
 
 from handlers import commands, callback
 
-
+BOT_TOKEN='8409827058:AAHIQ2W66s1rhKDKLHe6vDssm_ZPtRN6Xyk'
 
 async def main():
-    load_dotenv()
-    token = os.getenv("BOT_TOKEN")
-    bot = Bot(token)
+    bot = Bot(BOT_TOKEN)
     dp = Dispatcher()
     try:
         if not os.path.exists('downloads'):
